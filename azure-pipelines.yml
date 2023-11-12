@@ -26,7 +26,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
       inputs:
@@ -62,7 +62,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     environment: $(environmentName)
     strategy:
       runOnce:
