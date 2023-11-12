@@ -9,7 +9,7 @@ variables:
   webAppName: 'trident-webapp-webapp-linux-predict-trident'
 
   # Agent VM image name
-  vmName: 'Udacity Build Agent'
+  vmName: 'Udadcity Build Agent'
 
   # Environment name
   environmentName: 'trident-webapp-webapp-linux-predict-trident'
