@@ -12,7 +12,7 @@ variables:
   vmImageName: 'linux-build-agent'
 
   # Environment name
-  environmentName: 'testing'
+  environmentName: 'trident-webapp-webapp-linux-predict-trident'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
