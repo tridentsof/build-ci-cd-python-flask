@@ -3,7 +3,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '{{ azureServiceConnection.Id }}'
+  azureServiceConnectionId: '6be4cf43-e395-43e0-a60d-9f50bb1d9749'
 
   # Web app name
   webAppName: 'trident-webapp-webapp-linux-predict-trident'
