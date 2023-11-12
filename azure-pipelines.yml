@@ -73,9 +73,23 @@ stages:
               versionSpec: '$(pythonVersion)'
             displayName: 'Use Python version'
 
-          - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : {{ webAppName }}'
+          # - task: AzureWebApp@1
+          #   displayName: 'Deploy Azure Web App : $(webAppName)'
+          #   inputs:
+          #     appType: webAppLinux
+
+          #     azureSubscription: $(azureServiceConnectionId)
+          #     appName: $(webAppName)
+          #     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+
+          - task: AzureRmWebAppDeployment@4
+            displayName: 'Deploy Azure Web App'
             inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'UdacityServiceConnection'
+              appType: 'webAppLinux'
+              WebAppName: 'trident-webapp-webapp-linux-predict-trident'
+              packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+              RuntimeStack: 'PYTHON|3.8'
+
+          
