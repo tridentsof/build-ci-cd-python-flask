@@ -9,7 +9,7 @@ variables:
   webAppName: 'trident-webapp-webapp-linux-predict-trident'
 
   # Agent VM image name
-  vmImageName: 'linux-build-agent'
+  vmName: 'Udacity Build Agent'
 
   # Environment name
   environmentName: 'trident-webapp-webapp-linux-predict-trident'
@@ -25,7 +25,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: $(vmImageName)
+    pool: $(vmName)
     steps:
     - task: UsePythonVersion@0
       inputs:
@@ -60,7 +60,7 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool: $(vmImageName)
+    pool: $(vmName)
     environment: $(environmentName)
     strategy:
       runOnce:
