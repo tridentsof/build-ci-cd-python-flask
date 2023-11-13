@@ -14,6 +14,13 @@ pip --version
 # Update pip
 python -m pip install -U pip
 
+# Install pip python3
+sudo apt-get install python3-pip
+sudo apt-get update
+
+# Install libpython to share lib
+sudo apt-get install libpython3.6-dev
+
 # Install ZIP
 sudo apt-get install python3.8-distutils
 sudo apt-get -y install zip
