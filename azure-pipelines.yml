@@ -3,16 +3,16 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureServiceConnectionId: '6be4cf43-e395-43e0-a60d-9f50bb1d9749'
+  azureServiceConnectionId: '2dad86b0-95b7-4a0c-87fb-d0a303148a46'
 
   # Web app name
-  webAppName: 'trident-webapp-webapp-linux-predict-trident'
+  webAppName: 'trident-webapp-linux-predict-trident'
 
   # Agent VM image name
-  vmName: 'Udadcity Build Agent'
+  vmName: 'demo-cicd-build-agent'
 
   # Environment name
-  environmentName: 'trident-webapp-webapp-linux-predict-trident'
+  environmentName: 'trident-webapp-linux-predict-trident'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -85,9 +85,9 @@ stages:
             displayName: 'Deploy Azure Web App'
             inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: 'UdacityServiceConnection'
+              azureSubscription: 'DemoCICDServiceConnection'
               appType: 'webAppLinux'
-              WebAppName: 'trident-webapp-webapp-linux-predict-trident'
+              WebAppName: 'trident-webapp-linux-predict-trident'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'PYTHON|3.8'
 
