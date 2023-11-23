@@ -11,6 +11,10 @@ sudo apt-get install python3-pip
 python3.8 --version
 pip --version 
 
+# Set python default version to python 3.8
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+sudo update-alternatives --config python
+
 # Update pip
 python -m pip install -U pip
 
@@ -19,7 +23,7 @@ sudo apt-get install python3-pip
 sudo apt-get update
 
 # Install libpython to share lib
-sudo apt-get install libpython3.6-dev
+sudo apt-get install libpython3.8-dev
 
 # Install ZIP
 sudo apt-get install python3.8-distutils

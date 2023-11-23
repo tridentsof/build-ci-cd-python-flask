@@ -11,7 +11,7 @@
 		"image_offer": "UbuntuServer",
 		"image_sku": "18.04-LTS",
 
-		"managed_image_resource_group_name": "udacity-project-share",
+		"managed_image_resource_group_name": "rg-trident-share",
 		"managed_image_name": "linux_build_agent",
 
 		"location": "East US",
