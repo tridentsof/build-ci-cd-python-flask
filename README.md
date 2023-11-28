@@ -12,23 +12,22 @@ The technology that is using:
   
 ## Project Plan
 
-- [Link to Trello board for the project](https://trello.com/b/QOFejmJS/buidling-python-flask-ml)
+- [Link to Trello board for the project](https://trello.com/invite/b/QOFejmJS/ATTIdd9526605b1501d298e944833d24babcB09F7E43/buidling-python-flask-ml)
 
-- [Link to spreadsheet that includes the original and final project plan](https://docs.google.com/spreadsheets/d/1YdskzFdry-RunTM8xzNu3w7ixRqVMimJaYvLwZmSOhQ/edit#gid=1348135932)
+- [Link to spreadsheet that includes the original and final project plan](https://docs.google.com/spreadsheets/d/1YdskzFdry-RunTM8xzNu3w7ixRqVMimJaYvLwZmSOhQ/edit?usp=sharing)
 
 ## Instructions
 
-<TODO:  
-
 - Architectural Diagram (Shows how key parts of the system work)>
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+![Architectural Diagram](./Screen%20Shoots/architectural-diagram.JPG)
 
 # How you can run the project?
 
 > To run this project you need the following dependency
 
 - [Install Python 3.8](https://www.python.org/downloads/release/python-380/)
+- Install locust: pip3 install locust
 
 > Step to run the app in local
 
@@ -84,6 +83,14 @@ python -m flask run
 
 - Successful prediction from deployed flask app in Azure Cloud Shell.
 ![Successful prediction from deployed flask app in Azure Cloud Shell](./Screen%20Shoots/run-predict-azure-cloudshell.png)
+
+- The application running against a load test with locust.
+
+Load test running:
+![Load test running](./Screen%20Shoots/loadtest-run.png)
+
+Load test report:
+![Load test report](./Screen%20Shoots/loadtest-report.png)
 
 The output should look similar to this:
 
